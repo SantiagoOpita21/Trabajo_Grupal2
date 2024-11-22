@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Barra de navegacion */
+
+.parte1 .logo_uefa img{
+    width: auto;
+    height: 9px;
+}
+
+.parte1 .logo_uefa{
+    margin-left: 150px;
+}
+
+.parte1 .logo_sesion img{
+    width: auto;
+    height: 18px;
+}
+
+.parte1{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    width: auto;
+    height: 30px;
+}
+
+.logo_sesion{
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 25px;
+    margin-left: 730px;
+}
+
+.logo_sesion ul li a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo_sesion ul li a:hover{
+    color: blueviolet;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.parte2 .logo_champions img{
+    width: auto;
+    height: 30px;
+}
+
+.parte2 .logo_champions{
+    margin-left: 140px;
+}
+
+.parte2{
+    display: flex;
+    background: blue;
+    width: auto;
+    height: 60px;
+}
+
+.parte2 {
+    display: flex;
+    background: linear-gradient(45deg,blue,blueviolet);
+    background-size: 400% 400%;
+    position: relative;
+    width: 100%; 
+    height: 60px;
+    justify-content: center; 
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 50px;
+}
+
+.parte2 .enlaces {
+   display: flex;
+   justify-content: center; 
+   width: 100%; 
+}
+
+.parte2 .enlaces ul {
+    display: flex;
+    justify-content: center; 
+    gap: 50px;
+    margin-right: 250px;
+}
+
+.parte2 .enlaces ul li {
+    display: inline-block;
+}
+
+.parte2 .enlaces ul li a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.parte2 .enlaces ul li a:hover{
+    font-size: 21px;
+    padding-left: 20px;
+    color: blueviolet;
+    
+}
+
+
+
