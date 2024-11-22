@@ -1,4 +1,25 @@
-*body{
 
-    
+/* Barra de navegacion */
+.parte1{
+    display: flex;
+    justify-content: space-between;
+    background-color:darkgrey;
+    width: auto;
+    height: 30px;
+}
+
+.parte1 > img{
+    width: auto;
+    height: 10px;
+}
+
+.logo_inicio{
+    display: flex;
+    gap: 5px;
+
+}
+
+.logo_inicio > img{
+    width: 20px;
+    height: 20px
 }
