@@ -105,40 +105,12 @@
 }
 
 .parte2 .enlaces ul li a:hover{
-    color:aqua;
+    color:lightseagreen;
+    font-size: 15px;
     
 }
 
-/* Botton */
 
-button  li a{
-    width: 9em;
-    height: 3em;
-    font-size: 15px;
-    font-family: inherit;
-    border: none;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-   }
-   
-   button::before {
-    content: '';
-    width: 0;
-    height: 3em;
-    border-radius: 30em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to right, rgb(15, 35, 216) 0%, #00027cc4 100%);
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-   }
-   
-   button:hover::before {
-    width: 9em;
-   }
 
 
 
