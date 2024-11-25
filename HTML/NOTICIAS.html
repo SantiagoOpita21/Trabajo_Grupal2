@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/NOTICIAS.css">
+    <link rel="stylesheet" href="/CSS/NOTICIAS.css"> 
+    <link rel="stylesheet" href="/CSS/Barra_navegacion.css">
     <title>NOTICIAS</title>
 </head>
 <body> 
     <body>
-        <div class="container">
-            <h1>NOTICIAS</h1>
-            <header>
-                <nav>
-                    <span class="cat" onclick="buscar('Tecnología')">Tecnología</span>
-                    <span class="cat" onclick="buscar('programación')">Programación</span>
-                    <span class="cat" onclick="buscar('deportes')">Deportes</span>
-                    <span class="cat" onclick="buscar('economía')">Economía</span>
-                    <span class="cat" onclick="buscar('educación')">Educación</span>
-                </nav>
-                <div class="busqueda">
-                    <input type="text" placeholder="Qué desea buscar" id="busqueda">
-                    <button onclick="buscarTema()">Buscar</button>
+
+        <div class="barra_navegacion">
+            <div class="parte1">
+                <div class="logo_uefa">
+                    <img src="/Trabajo_Grupal2/img/Historia/uefa-logo.png" alt="">
                 </div>
-            </header>
-    
-    
-            <div class="container-noticias">
-    
+                <div class="logo_sesion">
+                    <ul>
+                        <li><a href="#">Iniciar Sesión</li></ul>
+        
+                    <img src="/Trabajo_Grupal2/img/circulo-de-usuario.png" alt="">
+                </div>
+            </div>
+            <div class="parte2">
+                <div class="logo_champions">
+                    <img src="/Trabajo_Grupal2/img/Historia/logotype_dark.png" alt="">
+                </div>
+                <div class="enlaces">
+                    <ul>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Noticias</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <script src="/js/NOTICIAS.js"></script>
-        
 
-
-
-
-    
 </body>
 </html>
