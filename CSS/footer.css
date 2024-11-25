@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    height: 600px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-image: url(/Trabajo_Grupal2/img/Historia/backgroundDark04L.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding: 20px 0;
+    display: flex;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 40px;
+}
+
+.footer-col2{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.footer-col h4{
+    font-size: 12px;
+    color:#ffff;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.footer-col2 h4{
+    font-size: 10px;
+    color:#ffff;
+    text-transform: capitalize;
+    margin-top: 8px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+
+
+.footer-col ul li a{
+    font-size: 11px;
+    text-transform: capitalize;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color:lightseagreen;
+}
+
+.footer-col2 .social-links a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border: 1px  solid;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+.footer-col2 .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/* .privacidad{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: #ffffff;
+    gap: 40px;
+    font-size: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    
+
+} */
+
+@media (max-width:800px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:600px){
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
