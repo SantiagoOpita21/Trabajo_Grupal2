@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<<<<<<< HEAD
+    <link rel="stylesheet" href="/Trabajo_Grupal2/CSS/estilo.css">
+=======
+
+    <link rel="stylesheet" href="/Trabajo_Grupal2/CSS/estilo.css">
+    <script src="/Trabajo_Grupal2/js/app.js" async></script>
+
+    <link rel="stylesheet" href="/Trabajo_Grupal2/CSS/">
+>>>>>>> cedecd9fe3e4244e6c9fa3d691c26f2a31817f2f
+
+    
+    <script src="js/app.js" async></script>
+
+    <title> Tienda de la champions </title>
+</head>
+<body>
+    <div class="barra_navegacion">
+    <div class="parte1">
+        <div class="logo_uefa">
+            <img src="/Trabajo_Grupal2/img/Historia/uefa-logo.png" alt="">
+        </div>
+        <div class="logo_sesion">
+            <ul>
+                <li><a href="#">Iniciar Sesión</li></ul>
+
+            <img src="/Trabajo_Grupal2/img/circulo-de-usuario.png" alt="">
+        </div>
+    </div>
+    <div class="parte2">
+        <div class="logo_champions">
+            <img src="/Trabajo_Grupal2/img/Historia/logotype_dark.png" alt="">
+        </div>
+        <div class="enlaces">
+            <ul>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <header>
+        
+    </header>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">BARCELONA</span>
+                <img src="/Trabajo_Grupal2/img/tienda/zapato1_4b6846ad-1280-4b8f-a560-c80cbb148683_1080x1080.webp" alt="" class="img-item">
+                <span class="precio-item">$150 EUROS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">REAL MADRID</span>
+                <img src="/Trabajo_Grupal2/img/tienda/1715207608ISHR379jpg.jpg" alt="" class="img-item">
+                <span class="precio-item">$150 EUROS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">AJAX</span>
+                <img src="/Trabajo_Grupal2/img/tienda/ajax.jpeg" alt="" class="img-item">
+                <span class="precio-item">$180 EUROS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">BAYER</span>
+                <img src="/Trabajo_Grupal2/img/tienda/bayer.webp" alt="" class="img-item">
+                <span class="precio-item">$180 EUROS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">CHELSEA</span>
+                <img src="/Trabajo_Grupal2/img/tienda/chelsea.jpg" alt="" class="img-item">
+                <span class="precio-item">$80 EUROS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">JUVENTUS</span>
+                <img src="/Trabajo_Grupal2/img/tienda/juve.webp" alt="" class="img-item">
+                <span class="precio-item">$180 ERUOS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">LIVERPOOL</span>
+                <img src="/Trabajo_Grupal2/img/tienda/liverpool.jpg" alt="" class="img-item">
+                <span class="precio-item">$90 ERUOS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">MILAN</span>
+                <img src="/Trabajo_Grupal2/img/tienda/milan.jpg" alt="" class="img-item">
+                <span class="precio-item">$130 EUROS</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="#">Partidos </a></li>
+                        <li><a href="#">Mesa</a></li>
+                        <li><a href="#">Video</a></li>
+                        <li><a href="#">Juego azar</a></li>
+                        <li><a href="#">Estadisticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="#">Equipos</a></li>
+                        <li><a href="#">Nuevos formatos</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Almacenar</a></li>
+                    </ul> 
+                </div>
+                <div class="footer-col">
+                    <h4>VISITA TAMBIEN</h4>
+                    <ul>
+                        <li><a href="#">UEFA.com</a></li>
+                        <li><a href="#">Fundacion UEFA</a></li>
+                    </ul> 
+                </div>
+                <div class="footer-col">
+                    <h4>CAMBIAR IDIOMA</h4>
+                    <ul>
+                        <li><a href="#">Ingles</a></li>
+                        <li><a href="#">Frances</a></li>
+                        <li><a href="#">Aleman</a></li>
+                        <li><a href="#">Ruso</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Italiano</a></li>
+                        <li><a href="#">Portugues</a></li>
+                    </ul> 
+                </div>
+                <div class="footer-col2">
+                    <h4> Siguenos en</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="privacidad">
+                <div class="elemento1">
+                <p>Privacidad</p>
+                <p> Términos y condiciones</p>
+                <p>Política de cookies</p>
+                <p>Configuración de cookies</p>
+                </div>
+                <div class="elemento2">
+                    <p>© 1998-2024 UEFA. All rights reserved. <br>
+                        La palabra UEFA, el logo de la UEFA y todas las marcas relacionadas con las competiciones de la UEFA están protegidas por las marcas registradas y/o por el copyright de UEFA. Se prohíbe el uso de estas marcas registradas para uso comercial. El uso de UEFA.com significa la aceptación de sus Términos, <br> Condiciones y Política de Privacidad.</p>
+                </div>
+            </div>
+    
+        </div>
+    
+    </footer>
+</body>
+</html>
