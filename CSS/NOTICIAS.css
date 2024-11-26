@@ -1,185 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
 *{
     box-sizing: border-box;
-    font-family: 'Montserrat';
 }
-.container{
-    max-width: 1200px;
-    margin: auto;
-}
-h1{
-    text-align: center;
-    color:#027efae9;
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin:0;
+    background: #f5f6f9;
 }
 header{
+    background-color: #ffffff;
+    height: 65px;
     display: flex;
-    justify-content: space-between;
-}
-nav{
-    text-align: center;
-    margin-bottom: 20px;
-}
-nav span{
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
+    align-items: center;
     padding: 5px 10px;
-    border-radius: 30px;
-    margin: 0 5px;
+    justify-content: space-between;
+    box-shadow: 0px 3px 10px 0 rgba(80,119,242,0.3);
+}
+/* nav,.inputSearch{
+    display: none;
+} */
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+nav ul li{
     cursor: pointer;
 }
-nav span:hover{
-    color: rgba(0, 51, 255, 0.815);
-}
-header input{
-    padding: 5px 10px;
-    border: none;
-    border: 2px solid #ccc;
-    border-radius: 30px;
-}
-header button{
-    border: none;
-    padding: 7px 10px;
-    border-radius: 30px;
-    border: 2px solid #027efae9;
-}
-.container-noticias{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap:30px;
-    padding-bottom: 20px;
-}
-.container-noticias .item{
-    background-color: #027efae9;
-    max-width: 360px;
-    border:2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-    transition: .3s;
-}
-.container-noticias .item:hover{
-    box-shadow: 0 0 10px 5px #ccc;
-}
-.container-noticias .item:hover h2{
-    text-decoration: underline;
-}
-.container-noticias .item .info_item{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+nav ul li:hover{
+    color:#4361ee;
 }
 
-.container-noticias .item img{
+.inputSearch,
+form{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 400px;
+    border-radius: 35px;
+    overflow: hidden;
+    border: 1.5px solid #4361ee;
+}
+.inputSearch  input{
     width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+    border:none;
+    outline: none;
+    font-size: 16px;
 }
-.container-noticias #btnSiguiente{
+.inputSearch span{
+    width: 70px;
+    background-color: #4361ee;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color:white;
+}
+.menuBtn{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
-.container-noticias #btnSiguiente:hover{
-    color: #fc0505;
+.menuBtn:hover{
+    background-color: #4361ee;
+    color:#ffffff;
+}
+.desktop{
+    display: none;
+}
+@media all and (min-width:700px) {
+    header{
+        padding: 5px 30px;
+    }
+    .desktop{
+        display: flex;
+    }
+    .menuBtn{
+        display: none;
+    }
 }
 
 
-/* barra de navegacion */
-.parte1 .logo_uefa img{
-    width: auto;
-    height: 9px;
+/***mobile menu ****/
+.mobile{
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    max-width: 700px;
+    background-color:#f5f6f9 ;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: none;
+    z-index: 2;
+    margin-left: -10px;
+}
+.mobile nav,
+.mobile nav ul{
+    flex-direction: column;
 }
 
-.parte1 .logo_uefa{
-    margin-left: 150px;
+.mobile .inputSearch,
+.mobile form{
+    height: 35px;
 }
 
-.parte1 .logo_sesion img{
-    width: auto;
-    height: 18px;
+.hidden{
+    display: none;
 }
 
-.parte1{
+@media all and (min-width:700px) {
+ .mobile{
+    display: none;
+ }   
+}
+
+
+
+/***css card***/
+main{
     display: flex;
-    justify-content: space-between;
-    background: black;
-    width: auto;
-    height: 30px;
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px;
+    margin: auto;
 }
-
-.logo_sesion{
+.card{
     display: flex;
-    gap: 8px;
-    font-size: 12px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 25px;
-    margin-left: 730px;
+    flex-direction: column;
+    max-width: 400px;
+    box-shadow: 7px 7px 25px 1px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    background: #ffffff;
 }
-
-.logo_sesion ul li a{
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.card img{
+    min-height: 210px;
+    max-height: 210px;
+    background-color: #f4f4f4;
 }
-
-.logo_sesion ul li a:hover{
-    color: blueviolet;
-    font-size: 13px;
-    padding-left: 20px;
+.card h4,
+.card div{
+    padding: 5px 10px;
+    margin: 0px;
 }
-
-.parte2 .logo_champions img{
-    width: auto;
-    height: 30px;
-}
-
-.parte2 .logo_champions{
-    margin-left: 140px;
-}
-
-.parte2{
+.publishbyDate{
     display: flex;
-    width: auto;
-    height: 60px;
+    align-items: center;
+    color:#a5a1a1;
 }
-
-.parte2 {
-    display: flex;
-    background-image: linear-gradient(to right, #0400ff 0%, #070068 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    width: 100%; 
-    height: 60px;
-    justify-content: center; 
-    line-height: 50px;
-}
-
-.parte2 .enlaces {
-   display: flex;
-   justify-content: center; 
-   width: 100%; 
-}
-
-.parte2 .enlaces ul {
-    display: flex;
-    justify-content: center; 
-    gap: 50px;
-    margin-right: 250px;
-}
-
-.parte2 .enlaces ul li {
-    display: inline-block;
-}
-
-.parte2 .enlaces ul li a{
-    color: white;
+.publishbyDate p{
+    margin:0px;
     font-size: 14px;
-    font-family:Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    transition: all 0.3s ease;
 }
-
-.parte2 .enlaces ul li a:hover{
-    color:lightseagreen;
-    font-size: 15px;
+.publishbyDate span{
+    padding: 0px 10px;
+}
+.desc{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin:0;
     
+}
+.card a{
+    color:inherit;
+    text-decoration: none;
+}
+@media all and (min-width:700px) {
+    main{
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card h4,
+.card div{
+    padding: 5px 15px;
+}
 }

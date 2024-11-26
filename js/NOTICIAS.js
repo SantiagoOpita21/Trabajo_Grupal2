@@ -1,97 +1,73 @@
-//Cantida de noticias que se cargaran cada vez que se presione siguiente (5 + 1)
-let cantidadNoticias = 5;
-let pageFinal = cantidadNoticias;
-let pageInicial = 0;
-let temaActual = "Tecnología";
+const API_KEY = "499d03534f224e8890dcd1f95376001c"
+const url = "https://newsapi.org/v2/everything?q="
 
-let noticias = {
-    "apiKey":"f3798e116eb342b2bae58e7f0cbd9c11",
-    fetchNoticias:function(categoria){
-        fetch(
-            "https://newsapi.org/v2/everything?q="
-            +categoria+
-            "&languaje=es&apiKey="+this.apiKey
-        )
-        .then((response)=>response.json())
-        .then((data)=>this.displayNoticias(data));
-    },
-    displayNoticias: function(data){
-        //elimino todo si ha seleccionado un nuevo tema
-        if(pageInicial==0){
-            document.querySelector(".container-noticias").textContent ="";
+
+
+async function fetchData(query){
+    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`)
+    const data = await res.json()
+    return data
+}
+fetchData("all").then(data => renderMain(data.articles))
+
+//menu btn
+let mobilemenu = document.querySelector(".mobile")
+let menuBtn = document.querySelector(".menuBtn")
+let menuBtnDisplay = true;
+
+menuBtn.addEventListener("click",()=>{
+    mobilemenu.classList.toggle("hidden")
+})
+
+
+//render news 
+function renderMain(arr){
+    let mainHTML = ''
+    for(let i = 0 ; i < arr.length ;i++){
+        if(arr[i].urlToImage){
+        mainHTML += ` <div class="card">
+                        <a href=${arr[i].url}>
+                        <img src=${arr[i].urlToImage} lazy="loading" />
+                        <h4>${arr[i].title}</h4>
+                        <div class="publishbyDate">
+                            <p>${arr[i].source.name}</p>
+                            <span>•</span>
+                            <p>${new Date(arr[i].publishedAt).toLocaleDateString()}</p>
+                        </div>
+                        <div class="desc">
+                           ${arr[i].description}
+                        </div>
+                        </a>
+                     </div>
+        `
         }
-
-
-        for(i=pageInicial;i<=pageFinal;i++){
-            const {title} = data.articles[i];
-            let h2 = document.createElement("h2");
-            h2.textContent = title;
-    
-            const {urlToImage} = data.articles[i];
-            let img = document.createElement("img");
-            img.setAttribute("src", urlToImage);
-
-            let info_item = document.createElement("div");
-            info_item.className = "info_item";
-            const {publishedAt} = data.articles[i];
-            let fecha = document.createElement("span");
-            let date = publishedAt;
-            date=date.split("T")[0].split("-").reverse().join("-");
-            fecha.className = "fecha";
-            fecha.textContent = date;
-
-            const {name} = data.articles[i].source;
-            let fuente = document.createElement("span");
-            fuente.className = "fuente";
-            fuente.textContent = name;
-
-            info_item.appendChild(fecha);
-            info_item.appendChild(fuente);
-
-            const {url} = data.articles[i];
-
-            let item = document.createElement("div");
-            item.className = "item";
-            item.appendChild(h2);
-            item.appendChild(img);
-            item.appendChild(info_item);
-            item.setAttribute("onclick", "location.href='"+url+"'");
-            document.querySelector(".container-noticias").appendChild(item);
-        }
-
-        let btnSiguiente = document.createElement("span");
-        btnSiguiente.id = "btnSiguiente";
-        btnSiguiente.textContent = "Ver más";
-        btnSiguiente.setAttribute("onclick","siguiente()");
-        document.querySelector(".container-noticias").appendChild(btnSiguiente);
     }
+
+    document.querySelector("main").innerHTML = mainHTML
 }
 
 
+const searchBtn = document.getElementById("searchForm")
+const searchBtnMobile = document.getElementById("searchFormMobile")
+const searchInputMobile = document.getElementById("searchInputMobile") 
+const searchInput = document.getElementById("searchInput")
 
-function buscar(cat){
-    pageInicial = 0;
-    pageFinal = cantidadNoticias;
-    temaActual = cat;
-    noticias.fetchNoticias(cat);
+searchBtn.addEventListener("submit",async(e)=>{
+    e.preventDefault()
+    console.log(searchInput.value)
+
+    const data = await fetchData(searchInput.value)
+    renderMain(data.articles)
+
+})
+searchBtnMobile.addEventListener("submit",async(e)=>{
+    e.preventDefault()
+    const data = await fetchData(searchInputMobile.value)
+    renderMain(data.articles)
+})
+
+
+async function Search(query){
+    const data = await fetchData(query)
+    renderMain(data.articles)
 }
-
-function buscarTema(){
-    pageInicial = 0;
-    pageFinal = cantidadNoticias;
-
-    let tema = document.querySelector("#busqueda").value;
-    temaActual = tema;
-    noticias.fetchNoticias(temaActual);
-}
-
-function siguiente(){
-    pageInicial = pageFinal + 1;
-    pageFinal = pageFinal + cantidadNoticias + 1;
-    //eliminamos el botón siguiente
-    document.querySelector("#btnSiguiente").remove();
-    noticias.fetchNoticias(temaActual);
-
-}
-
-noticias.fetchNoticias(temaActual);
