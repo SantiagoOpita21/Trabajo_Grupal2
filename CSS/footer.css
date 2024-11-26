@@ -99,7 +99,7 @@ ul{
     background-color: #ffffff;
 }
 
-.privacidad .parte1{
+.privacidad .elemento1{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -111,7 +111,7 @@ ul{
     cursor: pointer;
 } 
 
-.privacidad .parte2 {
+.privacidad .elemento2 {
     width: 700px;
     height: auto;
     color:darkgrey;
