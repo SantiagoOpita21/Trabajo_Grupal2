@@ -111,6 +111,65 @@
     
 }
 
+/* contenido */
+/* Carrusel principal */
+#carouselExampleSlidesOnly {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;  /* Centra el carrusel */
+    overflow: hidden; /* Asegura que las imágenes no sobresalgan del contenedor */
+}
+
+/* Estilo para las imágenes del carrusel */
+#carouselExampleSlidesOnly .carousel-item img {
+    width: 700px;
+    height: 500px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+    transition: transform 0.5s ease-in-out; /* Añadir transición suave para el efecto hover */
+}
+
+/* Efecto hover en las imágenes */
+#carouselExampleSlidesOnly .carousel-item img:hover {
+    transform: scale(1.09); /* Efecto de zoom */
+}
+
+/* Estilo para los controles de navegación (flechas) */
+.carousel-control-prev, .carousel-control-next {
+    color: black; /* Color blanco para las flechas */
+    font-size: 10px; /* Aumentar el tamaño de las flechas */
+   
+    border-radius: 50%; /* Hacer las flechas redondeadas */
+    width: 40px; /* Tamaño de las flechas */
+    height: 40px;
+}
+
+/* Cambiar el color de las flechas al pasar el mouse */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro cuando se pasa el mouse */
+}
+
+/* Estilo para los íconos de las flechas */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: white; /* Color de las flechas */
+    border-radius: 50%; /* Flechas circulares */
+}
+
+/* Estilo responsivo para dispositivos pequeños */
+@media (max-width: 768px) {
+    /* Ajustar la altura de las imágenes en dispositivos móviles */
+    #carouselExampleSlidesOnly .carousel-item img {
+        height: 400px; /* Disminuir la altura de las imágenes en pantallas pequeñas */
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        width: 40px; /* Reducir el tamaño de las flechas en dispositivos pequeños */
+        height: 40px;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: white;
+    }
+}
 
 
 
@@ -129,11 +188,11 @@
 body{
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-.container{
+.contenedor{
     max-width: 1170px;
     height: 700px;
     margin: auto;
@@ -146,6 +205,7 @@ body{
 
 ul{
     list-style: none;
+    padding: 0;
 }
 
 .footer{
