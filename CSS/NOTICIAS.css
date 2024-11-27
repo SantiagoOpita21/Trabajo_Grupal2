@@ -391,6 +391,7 @@ ul{
 .parte1 .logo_sesion img{
     width: auto;
     height: 18px;
+    margin-top: 5px;
 }
 
 .parte1{
@@ -406,7 +407,7 @@ ul{
     gap: 8px;
     font-size: 12px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 25px;
+    line-height: 30px;
     margin-left: 730px;
 }
 
@@ -425,6 +426,7 @@ ul{
 .parte2 .logo_champions img{
     width: auto;
     height: 30px;
+    margin-top: 10px;
 }
 
 .parte2 .logo_champions{
