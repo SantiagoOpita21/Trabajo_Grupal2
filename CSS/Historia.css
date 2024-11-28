@@ -111,6 +111,46 @@
 }
 
 
+/* contenido */
+/* Carrusel principal */
+#carouselExampleSlidesOnly {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;  /* Centra el carrusel */
+    overflow: hidden; /* Asegura que las imágenes no sobresalgan del contenedor */
+    box-shadow: 5px 8px 10px;
+}
+
+/* Estilo para las imágenes del carrusel */
+#carouselExampleSlidesOnly .carousel-item img {
+    width: 700px;
+    height: 500px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+    transition: transform 0.5s ease-in-out; /* Añadir transición suave para el efecto hover */
+}
+
+/* Efecto hover en las imágenes */
+#carouselExampleSlidesOnly .carousel-item img:hover {
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* Estilo responsivo para dispositivos pequeños */
+@media (max-width: 768px) {
+    /* Ajustar la altura de las imágenes en dispositivos móviles */
+    #carouselExampleSlidesOnly .carousel-item img {
+        height: 400px; /* Disminuir la altura de las imágenes en pantallas pequeñas */
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        width: 40px; /* Reducir el tamaño de las flechas en dispositivos pequeños */
+        height: 40px;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: white;
+    }
+}
+
 
 
 
@@ -128,11 +168,11 @@
 body{
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-.container{
+.contenedor{
     max-width: 1170px;
     height: 700px;
     margin: auto;
@@ -145,6 +185,7 @@ body{
 
 ul{
     list-style: none;
+    padding: 0;
 }
 
 .footer{
@@ -243,6 +284,140 @@ ul{
     margin-right: auto;
     margin-top: 30px;
 }
+
+
+/* Contenedor para el carrusel y la tarjeta */
+.contenedor-carrusel-tarjeta {
+    display: flex;
+    justify-content: space-between; /* Alinea ambos elementos con espacio entre ellos */
+    gap: 20px; /* Ajusta el espacio entre el carrusel y la tarjeta */
+    margin: 50px 100px; /* Ajuste de márgenes para un mejor espaciado en pantallas grandes */
+}
+
+/* Carrusel */
+#carouselExampleSlidesOnly {
+    width: 48%; /* El carrusel ocupa el 48% del ancho */
+    height: 400px;
+    overflow: hidden; /* No deja que las imágenes sobresalgan del contenedor */
+    box-shadow: 5px 8px 10px;
+    margin: 0;
+}
+
+/* Tarjeta */
+.tarjeta {
+    width: 48%; /* La tarjeta ocupa el 48% del ancho */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Texto dentro de la tarjeta */
+.texto {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.texto h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.texto p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Imágenes dentro de la tarjeta */
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.imagenes img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* Contenedor de imágenes dentro de la tarjeta */
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative; /* Aseguramos que el contenedor de las imágenes tenga un contexto de posición */
+}
+
+.imagenes img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    position: relative; /* Establecemos el contexto de las imágenes para que el texto pueda estar posicionado sobre ellas */
+}
+
+/* Estilo para el texto que irá sobre las imágenes */
+.texto-imagen {
+    position: absolute; /* Posicionamos el texto absolutamente dentro de su contenedor */
+    top: 50%; /* Posicionamos el texto en el centro de la imagen */
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centra el texto exactamente en el medio de la imagen */
+    color: white; /* Color blanco para el texto */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Hacemos el texto en negrita */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos sombra para que el texto sea más legible sobre la imagen */
+    text-align: center; /* Alineamos el texto al centro */
+    pointer-events: none; /* Evita que el texto interfiera con los clics en las imágenes */
+}
+
+/* Responsividad: Ajustamos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .imagenes {
+        flex-direction: row; /* Disposición horizontal para pantallas pequeñas */
+        justify-content: space-between;
+    }
+
+    .imagenes img {
+        width: 45%; /* Ajustamos el tamaño de las imágenes */
+        height: auto;
+    }
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    /* Cambiar la disposición de la tarjeta y el carrusel a una columna en pantallas pequeñas */
+    .contenedor-carrusel-tarjeta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Asegurarse de que tanto el carrusel como la tarjeta ocupen el 90% del ancho en pantallas pequeñas */
+    #carouselExampleSlidesOnly, .tarjeta {
+        width: 90%;
+    }
+    
+    /* Hacer las imágenes dentro de la tarjeta más grandes y dispuestas en fila */
+    .imagenes {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .imagenes img {
+        width: 45%; /* Las imágenes ocupan el 45% del ancho */
+        height: auto;
+    }
+}
+
+
 
 
 @media (max-width:600px){
