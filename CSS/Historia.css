@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
     padding: 0;
@@ -149,7 +148,7 @@ ul{
 }
 
 .footer{
-    background-image: url(/Trabajo_Grupal2/img/Historia/backgroundDark04L.jpg);
+    background-image: url(/img/Historia/backgroundDark04L.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
