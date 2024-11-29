@@ -305,116 +305,68 @@ ul{
 
 /* Tarjeta */
 .tarjeta {
-    width: 48%; /* La tarjeta ocupa el 48% del ancho */
-    background-color: #fff;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    background-color: #fff;
 }
 
-/* Texto dentro de la tarjeta */
 .texto {
-    flex: 1;
-    padding-right: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .texto h2 {
-    font-size: 1.8em;
+    font-size: 2rem;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .texto p {
-    font-size: 1.1em;
-    color: #555;
+    font-size: 1.1rem;
+    color: #666;
 }
 
-/* Imágenes dentro de la tarjeta */
 .imagenes {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
-.imagenes img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-/* Contenedor de imágenes dentro de la tarjeta */
-.imagenes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    position: relative; /* Aseguramos que el contenedor de las imágenes tenga un contexto de posición */
+.imagen-item {
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.imagenes img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 5px;
-    position: relative; /* Establecemos el contexto de las imágenes para que el texto pueda estar posicionado sobre ellas */
+.imagen-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-/* Estilo para el texto que irá sobre las imágenes */
+.imagen-item:hover img {
+    transform: scale(1.05);
+}
+
 .texto-imagen {
-    position: absolute; /* Posicionamos el texto absolutamente dentro de su contenedor */
-    top: 50%; /* Posicionamos el texto en el centro de la imagen */
-    left: 50%; 
-    transform: translate(-50%, -50%); /* Centra el texto exactamente en el medio de la imagen */
-    color: white; /* Color blanco para el texto */
-    font-size: 14px; /* Tamaño de fuente */
-    font-weight: bold; /* Hacemos el texto en negrita */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos sombra para que el texto sea más legible sobre la imagen */
-    text-align: center; /* Alineamos el texto al centro */
-    pointer-events: none; /* Evita que el texto interfiera con los clics en las imágenes */
-}
-
-/* Responsividad: Ajustamos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .imagenes {
-        flex-direction: row; /* Disposición horizontal para pantallas pequeñas */
-        justify-content: space-between;
-    }
-
-    .imagenes img {
-        width: 45%; /* Ajustamos el tamaño de las imágenes */
-        height: auto;
-    }
-}
-
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    /* Cambiar la disposición de la tarjeta y el carrusel a una columna en pantallas pequeñas */
-    .contenedor-carrusel-tarjeta {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Asegurarse de que tanto el carrusel como la tarjeta ocupen el 90% del ancho en pantallas pequeñas */
-    #carouselExampleSlidesOnly, .tarjeta {
-        width: 90%;
-    }
-    
-    /* Hacer las imágenes dentro de la tarjeta más grandes y dispuestas en fila */
-    .imagenes {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .imagenes img {
-        width: 45%; /* Las imágenes ocupan el 45% del ancho */
-        height: auto;
-    }
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
 }
 
 
